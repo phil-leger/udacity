@@ -1,0 +1,344 @@
+TODO 0: initialize timer...
+TODO 1: get input arguments...
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+TODO 2: get pet labels from images...
+Filename: 'Siberian_husky_01.jpg'. Pet labels : 'siberian husky'
+Filename: 'Poodle_03.img'. Pet labels : 'poodle'
+Filename: '03232_Poodle.img'. Pet labels : ''
+Filename: 'Flowers_01.jpg'. Pet labels : 'flowers'
+Filename: 'Turtle_01.jpg'. Pet labels : 'turtle'
+Ignoring file ..cache as it is starting with '.'
+Filename: 'Siberian_husky_02.jpg'. Pet labels : 'siberian husky'
+
+Pet Image Label Dictionary has 6 key-value pairs.
+Below are 6 of them:
+ 1 key:          Siberian_husky_01.jpg  label:             siberian husky
+ 2 key:                  Poodle_03.img  label:                     poodle
+ 3 key:               03232_Poodle.img  label:                           
+ 4 key:                 Flowers_01.jpg  label:                    flowers
+ 5 key:                  Turtle_01.jpg  label:                     turtle
+ 6 key:          Siberian_husky_02.jpg  label:             siberian husky
+TODO 3: classify images...
+Image Siberian_husky_01.jpg labelled 'siberian husky' classified as 'eskimo dog, husky' - match: 0
+Image Poodle_03.img labelled 'poodle' classified as 'standard poodle, poodle' - match: 1
+Image 03232_Poodle.img labelled '' classified as 'standard poodle, poodle' - match: 1
+Image Flowers_01.jpg labelled 'flowers' classified as 'vase' - match: 0
+Image Turtle_01.jpg labelled 'turtle' classified as 'box turtle, box tortoise' - match: 1
+Image Siberian_husky_02.jpg labelled 'siberian husky' classified as 'eskimo dog, husky' - match: 0
+
+     MATCH:
+
+                 Poodle_03.img: 
+Real:                     poodle   Classifier:        standard poodle, poodle
+
+              03232_Poodle.img: 
+Real:                              Classifier:        standard poodle, poodle
+
+                 Turtle_01.jpg: 
+Real:                     turtle   Classifier:       box turtle, box tortoise
+
+ NOT A MATCH:
+
+         Siberian_husky_01.jpg: 
+Real:             siberian husky   Classifier:              eskimo dog, husky
+
+                Flowers_01.jpg: 
+Real:                    flowers   Classifier:                           vase
+
+         Siberian_husky_02.jpg: 
+Real:             siberian husky   Classifier:              eskimo dog, husky
+
+# Total Images 6 # Matches: 3 # NOT Matches: 3
+TODO 4: match labels of dogs...
+Dog chihuahua added in dictionary.
+Dog japanese spaniel added in dictionary.
+Dog maltese dog, maltese terrier, maltese added in dictionary.
+Dog pekinese, pekingese, peke added in dictionary.
+Dog shih-tzu added in dictionary.
+Dog blenheim spaniel added in dictionary.
+Dog papillon added in dictionary.
+Dog toy terrier added in dictionary.
+Dog rhodesian ridgeback added in dictionary.
+Dog afghan hound, afghan added in dictionary.
+Dog basset, basset hound added in dictionary.
+Dog beagle added in dictionary.
+Dog bloodhound, sleuthhound added in dictionary.
+Dog bluetick added in dictionary.
+Dog black-and-tan coonhound added in dictionary.
+Dog walker hound, walker foxhound added in dictionary.
+Dog english foxhound added in dictionary.
+Dog redbone added in dictionary.
+Dog borzoi, russian wolfhound added in dictionary.
+Dog irish wolfhound added in dictionary.
+Dog italian greyhound added in dictionary.
+Dog whippet added in dictionary.
+Dog ibizan hound, ibizan podenco added in dictionary.
+Dog norwegian elkhound, elkhound added in dictionary.
+Dog otterhound, otter hound added in dictionary.
+Dog saluki, gazelle hound added in dictionary.
+Dog scottish deerhound, deerhound added in dictionary.
+Dog weimaraner added in dictionary.
+Dog staffordshire bullterrier, staffordshire bull terrier added in dictionary.
+Dog american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier added in dictionary.
+Dog bedlington terrier added in dictionary.
+Dog border terrier added in dictionary.
+Dog kerry blue terrier added in dictionary.
+Dog irish terrier added in dictionary.
+Dog norfolk terrier added in dictionary.
+Dog norwich terrier added in dictionary.
+Dog yorkshire terrier added in dictionary.
+Dog wire-haired fox terrier added in dictionary.
+Dog lakeland terrier added in dictionary.
+Dog sealyham terrier, sealyham added in dictionary.
+Dog airedale, airedale terrier added in dictionary.
+Dog cairn, cairn terrier added in dictionary.
+Dog australian terrier added in dictionary.
+Dog dandie dinmont, dandie dinmont terrier added in dictionary.
+Dog boston bull, boston terrier added in dictionary.
+Dog miniature schnauzer added in dictionary.
+Dog giant schnauzer added in dictionary.
+Dog standard schnauzer, schnauzer added in dictionary.
+Dog scotch terrier, scottish terrier, scottie added in dictionary.
+Dog tibetan terrier, chrysanthemum dog added in dictionary.
+Dog silky terrier, sydney silky added in dictionary.
+Dog soft-coated wheaten terrier added in dictionary.
+Dog west highland white terrier added in dictionary.
+Dog giant schnauzer already exists, we won't add it!
+Dog lhasa, lhasa apso added in dictionary.
+Dog flat-coated retriever added in dictionary.
+Dog curly-coated retriever added in dictionary.
+Dog golden retriever added in dictionary.
+Dog labrador retriever added in dictionary.
+Dog chesapeake bay retriever added in dictionary.
+Dog german shorthaired pointer added in dictionary.
+Dog vizsla, hungarian pointer added in dictionary.
+Dog english setter added in dictionary.
+Dog irish setter, red setter added in dictionary.
+Dog gordon setter added in dictionary.
+Dog brittany spaniel added in dictionary.
+Dog clumber, clumber spaniel added in dictionary.
+Dog english springer, english springer spaniel added in dictionary.
+Dog welsh springer spaniel added in dictionary.
+Dog cocker spaniel, english cocker spaniel, cocker added in dictionary.
+Dog sussex spaniel added in dictionary.
+Dog irish water spaniel added in dictionary.
+Dog kuvasz added in dictionary.
+Dog schipperke added in dictionary.
+Dog groenendael added in dictionary.
+Dog malinois added in dictionary.
+Dog briard added in dictionary.
+Dog kelpie added in dictionary.
+Dog komondor added in dictionary.
+Dog old english sheepdog, bobtail added in dictionary.
+Dog shetland sheepdog, shetland sheep dog, shetland added in dictionary.
+Dog collie added in dictionary.
+Dog border collie added in dictionary.
+Dog bouvier des flandres, bouviers des flandres added in dictionary.
+Dog rottweiler added in dictionary.
+Dog german shepherd, german shepherd dog, german police dog, alsatian added in dictionary.
+Dog doberman, doberman pinscher added in dictionary.
+Dog miniature pinscher added in dictionary.
+Dog greater swiss mountain dog added in dictionary.
+Dog bernese mountain dog added in dictionary.
+Dog appenzeller added in dictionary.
+Dog entlebucher added in dictionary.
+Dog boxer added in dictionary.
+Dog bull mastiff added in dictionary.
+Dog tibetan mastiff added in dictionary.
+Dog french bulldog added in dictionary.
+Dog great dane added in dictionary.
+Dog saint bernard, st bernard added in dictionary.
+Dog eskimo dog, husky added in dictionary.
+Dog malamute, malemute, alaskan malamute added in dictionary.
+Dog siberian husky added in dictionary.
+Dog dalmatian, coach dog, carriage dog added in dictionary.
+Dog affenpinscher, monkey pinscher, monkey dog added in dictionary.
+Dog basenji added in dictionary.
+Dog pug, pug-dog added in dictionary.
+Dog leonberg added in dictionary.
+Dog newfoundland, newfoundland dog added in dictionary.
+Dog great pyrenees added in dictionary.
+Dog samoyed, samoyede added in dictionary.
+Dog pomeranian added in dictionary.
+Dog chow, chow chow added in dictionary.
+Dog keeshond added in dictionary.
+Dog brabancon griffon added in dictionary.
+Dog pembroke, pembroke welsh corgi, corgi added in dictionary.
+Dog cardigan, cardigan welsh corgi, corgi added in dictionary.
+Dog toy poodle added in dictionary.
+Dog miniature poodle added in dictionary.
+Dog standard poodle, poodle added in dictionary.
+Dog mexican hairless added in dictionary.
+Dog affenpinscher added in dictionary.
+Dog afghan hound added in dictionary.
+Dog airedale terrier added in dictionary.
+Dog akita added in dictionary.
+Dog alaskan malamute added in dictionary.
+Dog american eskimo dog added in dictionary.
+Dog american foxhound added in dictionary.
+Dog american staffordshire terrier added in dictionary.
+Dog american water spaniel added in dictionary.
+Dog anatolian shepherd dog added in dictionary.
+Dog australian cattle dog added in dictionary.
+Dog australian shepherd added in dictionary.
+Dog basset hound added in dictionary.
+Dog bearded collie added in dictionary.
+Dog beauceron added in dictionary.
+Dog belgian malinois added in dictionary.
+Dog belgian sheepdog added in dictionary.
+Dog belgian tervuren added in dictionary.
+Dog bichon frise added in dictionary.
+Dog black and tan coonhound added in dictionary.
+Dog black russian terrier added in dictionary.
+Dog bloodhound added in dictionary.
+Dog bluetick coonhound added in dictionary.
+Dog borzoi added in dictionary.
+Dog boston terrier added in dictionary.
+Dog bouvier des flandres added in dictionary.
+Dog boykin spaniel added in dictionary.
+Dog brittany added in dictionary.
+Dog brussels griffon added in dictionary.
+Dog bull terrier added in dictionary.
+Dog bulldog added in dictionary.
+Dog bullmastiff added in dictionary.
+Dog cairn terrier added in dictionary.
+Dog canaan dog added in dictionary.
+Dog cane corso added in dictionary.
+Dog cardigan welsh corgi added in dictionary.
+Dog cavalier king charles spaniel added in dictionary.
+Dog chinese crested added in dictionary.
+Dog chinese shar-pei added in dictionary.
+Dog chow chow added in dictionary.
+Dog clumber spaniel added in dictionary.
+Dog cocker spaniel added in dictionary.
+Dog corgi added in dictionary.
+Dog dachshund added in dictionary.
+Dog dalmatian added in dictionary.
+Dog dandie dinmont terrier added in dictionary.
+Dog deerhound added in dictionary.
+Dog doberman pinscher added in dictionary.
+Dog dogue de bordeaux added in dictionary.
+Dog english cocker spaniel added in dictionary.
+Dog english springer spaniel added in dictionary.
+Dog english toy spaniel added in dictionary.
+Dog entlebucher mountain dog added in dictionary.
+Dog field spaniel added in dictionary.
+Dog finnish spitz added in dictionary.
+Dog german pinscher added in dictionary.
+Dog german shepherd dog added in dictionary.
+Dog german wirehaired pointer added in dictionary.
+Dog glen of imaal terrier added in dictionary.
+Dog greyhound added in dictionary.
+Dog havanese added in dictionary.
+Dog ibizan hound added in dictionary.
+Dog icelandic sheepdog added in dictionary.
+Dog irish red and white setter added in dictionary.
+Dog irish setter added in dictionary.
+Dog japanese chin added in dictionary.
+Dog leonberger added in dictionary.
+Dog lhasa apso added in dictionary.
+Dog lowchen added in dictionary.
+Dog maltese added in dictionary.
+Dog manchester terrier added in dictionary.
+Dog mastiff added in dictionary.
+Dog neapolitan mastiff added in dictionary.
+Dog newfoundland added in dictionary.
+Dog norwegian buhund added in dictionary.
+Dog norwegian elkhound added in dictionary.
+Dog norwegian lundehund added in dictionary.
+Dog nova scotia duck tolling retriever added in dictionary.
+Dog old english sheepdog added in dictionary.
+Dog otterhound added in dictionary.
+Dog parson russell terrier added in dictionary.
+Dog pekingese added in dictionary.
+Dog pembroke welsh corgi added in dictionary.
+Dog petit basset griffon vendeen added in dictionary.
+Dog pharaoh hound added in dictionary.
+Dog plott added in dictionary.
+Dog pointer added in dictionary.
+Dog poodle added in dictionary.
+Dog portuguese water dog added in dictionary.
+Dog pug added in dictionary.
+Dog saint bernard added in dictionary.
+Dog saluki added in dictionary.
+Dog samoyed added in dictionary.
+Dog schnauzer added in dictionary.
+Dog scottish terrier added in dictionary.
+Dog sealyham terrier added in dictionary.
+Dog shetland sheepdog added in dictionary.
+Dog silky terrier added in dictionary.
+Dog smooth fox terrier added in dictionary.
+Dog staffordshire bull terrier added in dictionary.
+Dog tibetan terrier added in dictionary.
+Dog vizsla added in dictionary.
+Dog walker hound added in dictionary.
+Dog wirehaired pointing griffon added in dictionary.
+Dog xoloitzcuintli added in dictionary.
+Dog dog added in dictionary.
+Image Siberian_husky_01.jpg labelled 'siberian husky' classified as 'eskimo dog, husky' - match pet label/classifier label: 0 - match pet label/dognames.txt file: 1 - match classified label/dognames.txt file: 1
+Image Poodle_03.img labelled 'poodle' classified as 'standard poodle, poodle' - match pet label/classifier label: 1 - match pet label/dognames.txt file: 1 - match classified label/dognames.txt file: 1
+Image 03232_Poodle.img labelled '' classified as 'standard poodle, poodle' - match pet label/classifier label: 1 - match pet label/dognames.txt file: 0 - match classified label/dognames.txt file: 1
+Image Flowers_01.jpg labelled 'flowers' classified as 'vase' - match pet label/classifier label: 0 - match pet label/dognames.txt file: 0 - match classified label/dognames.txt file: 0
+Image Turtle_01.jpg labelled 'turtle' classified as 'box turtle, box tortoise' - match pet label/classifier label: 1 - match pet label/dognames.txt file: 0 - match classified label/dognames.txt file: 0
+Image Siberian_husky_02.jpg labelled 'siberian husky' classified as 'eskimo dog, husky' - match pet label/classifier label: 0 - match pet label/dognames.txt file: 1 - match classified label/dognames.txt file: 1
+
+     MATCH:
+
+                 Poodle_03.img: 
+Real:                     poodle   Classifier:        standard poodle, poodle  
+PetLabelDog: 1  ClassLabelDog: 1
+
+              03232_Poodle.img: 
+Real:                              Classifier:        standard poodle, poodle  
+PetLabelDog: 0  ClassLabelDog: 1
+
+                 Turtle_01.jpg: 
+Real:                     turtle   Classifier:       box turtle, box tortoise  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+         Siberian_husky_01.jpg: 
+Real:             siberian husky   Classifier:              eskimo dog, husky  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                Flowers_01.jpg: 
+Real:                    flowers   Classifier:                           vase  
+PetLabelDog: 0  ClassLabelDog: 0
+
+         Siberian_husky_02.jpg: 
+Real:             siberian husky   Classifier:              eskimo dog, husky  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 6 # Matches: 3 # NOT Matches: 3
+TODO 5: generate statistics...
+Statistics generation completed!
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  6  N Dog Images:  3  N NotDog Images:  3 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  66.7  Pct Corr Breed:  33.3
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  6  N Dog Images:  3  N NotDog Images:  3 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  66.7  Pct Corr Breed:  33.3
+TODO 6: generate results...
+Results Summary for CNN model 'alexnet':
+Number of images: 6
+Number of dog images: 3
+Number of non-dog images: 3
+Percentage pct_correct_dogs: 100.0%
+Percentage pct_correct_notdogs: 66.66666666666667%
+Percentage pct_correct_breed: 33.333333333333336%
+Percentage pct_match: 50.0%
+Printing misclassified dogs...
+Here they are:
+Pet image: '03232_Poodle.img' - pet label '' - classifier label 'standard poodle, poodle'
+Printing misclassified dogs breeds...
+Here they are:
+Pet image: 'Siberian_husky_01.jpg' - pet label 'siberian husky' - classifier label 'eskimo dog, husky'
+Pet image: 'Siberian_husky_02.jpg' - pet label 'siberian husky' - classifier label 'eskimo dog, husky'
+
+** Total Elapsed Runtime: 0:0:0
