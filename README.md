@@ -1,5 +1,5 @@
 # Udacity
-Projects implemented throughout my [Udacity](https//www.udacity.com) courses.
+Projects implemented throughout my [Udacity](https://www.udacity.com) courses.
 
 ## AI Programming with Python
 Keywords: Python, Numpy, Pandas, Pytorch, Neural Networks, Computer Vision
