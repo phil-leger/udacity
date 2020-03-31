@@ -1,2 +1,2 @@
 # udacity
-Projects implemented throughout my udacity courses 
+Projects implemented throughout my Udacity courses 
