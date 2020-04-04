@@ -21,6 +21,7 @@ This first project was mainly intended to make student practice Python and get c
 ### How to run
 
 Command line:
+
 `python check_images.py --dir image_dir --arch nn_arch --dogfile dog_file`
 where:
 * `image_dir` is the folder containing the images (pet_images or upload_images)
