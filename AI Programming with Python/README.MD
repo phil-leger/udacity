@@ -35,6 +35,8 @@ You can run the classification for all different architectures  in one shot by u
 * run_models_batch.bat (Windows)
 * run_models_batch.sh (Linux/Unix)
 
+Outcome can be shown [here](https://github.com/phil-leger/udacity/blob/master/AI%20Programming%20with%20Python/project1/ai_prog_with_python_project_1.png).
+
 ## Project 2: Created an image classifier using a trained model
 
 ### Part 1: develop a code for an image classifier built with Pytorch
@@ -75,7 +77,7 @@ Mainly:
 * predict the classification of that image
 * display the results graphically
 
-Outcome can be shown [here](https://github.com/phil-leger/udacity/blob/master/AI%20Programming%20with%20Python/project2/part1/ai_prog_with_python_project_2_1.png)
+Outcome can be shown [here](https://github.com/phil-leger/udacity/blob/master/AI%20Programming%20with%20Python/project2/part1/ai_prog_with_python_project_2_1.png).
 
 ### Part 2: convert the image classifier into a command line application
 
@@ -134,13 +136,13 @@ where:
 * `gpuset` is the usage of GPU for training to speed up the computation (1: yes, 0: no) - please see CUDA note
 
 Examples:
-* `python predict.py flowers/test/25/image_06583.jpg checkpoints/alexnet.pth --arch alexnet --top_k 5 --category_names cat_to_name.json --gpu 1`
-* `python predict.py flowers/test/25/image_06583.jpg checkpoints/resnet18.pth --arch resnet18 --top_k 5 --category_names cat_to_name.json --gpu 1`
-* `python predict.py flowers/test/25/image_06583.jpg checkpoints/vgg19_bn.pth --arch vgg19_bn --top_k 5 --category_names cat_to_name.json --gpu 1`
+* `python predict.py flowers/test/18/image_04277.jpg checkpoints/alexnet.pth --arch alexnet --top_k 5 --category_names cat_to_name.json --gpu 1`
+* `python predict.py flowers/test/18/image_04277.jpg checkpoints/resnet18.pth --arch resnet18 --top_k 5 --category_names cat_to_name.json --gpu 1`
+* `python predict.py flowers/test/18/image_04277.jpg checkpoints/vgg19_bn.pth --arch vgg19_bn --top_k 5 --category_names cat_to_name.json --gpu 1`
 
 Reminder: of course, the checkpoint file must be used accordingly with the right Neural Network architecture, otherwise the Neural Network can't be initialized.
 
-Outcome can be shown [here](https://github.com/phil-leger/udacity/blob/master/AI%20Programming%20with%20Python/project2/part2/ai_prog_with_python_project_2_2.png)
+Outcome can be shown [here](https://github.com/phil-leger/udacity/blob/master/AI%20Programming%20with%20Python/project2/part2/ai_prog_with_python_project_2_2.png).
 
 ## CUDA
 
