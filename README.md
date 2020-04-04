@@ -7,6 +7,12 @@ Keywords: Python, Numpy, Pandas, Pytorch, Neural Networks, Computer Vision
 * Project 1: Used a pre-trained image classifier to identify dog breeds
 * Project 2: Created an image classifier using a trained model
 
+## Requirements
+To run the programs, you need following software:
+* Python 3.X
+* Notebook editor
+I recommend the installation of [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html), as it's an all-in-one package containing everything you need (python, jupyter notebooks, additional packages such as numpy, pytorch, and so on).
+
 ## Licensing
 All that stuff is under MIT licensing:
 
