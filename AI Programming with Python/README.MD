@@ -133,7 +133,7 @@ where:
 * `nn_arch` is the Neural Network architecture used to classify the images (alexnet, resnet or vgg)
 * `top_k_num` is number of top most likely classes the flower is identified
 * `cat_name` is the file containing flower classes ID and their labels
-* `gpuset` is the usage of GPU for training to speed up the computation (1: yes, 0: no) - please see CUDA note
+* `gpuset` is the usage of GPU for testing to speed up the computation (1: yes, 0: no) - please see CUDA note
 
 Examples:
 * `python predict.py flowers/test/18/image_04277.jpg checkpoints/alexnet.pth --arch alexnet --top_k 5 --category_names cat_to_name.json --gpu 1`
