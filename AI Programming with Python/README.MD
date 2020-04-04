@@ -11,20 +11,23 @@ This first project was mainly intended to make student practice Python and get c
 ### Project structure
 
 |_ pet_images
+
 |_ upload_images
+
 |...
+
 |... all program files
 
 ### How to run
 
 Command line:
-python check_images.py --dir image_dir --arch nn_arch
+`python check_images.py --dir image_dir --arch nn_arch`
 where:
 * image_dir is the folder containing the images (pet_images or upload_images)
 * nn_arch is the Neural Network architecture used to classify the images (alexnet, resnet or vgg)
 
 Example:
-python check_images.py --dir pet_images/ --arch resnet
+`python check_images.py --dir pet_images/ --arch resnet`
 
 You can run the classification for all different architectures  in one shot by using:
 * run_models_batch.bat (Windows)
@@ -41,17 +44,20 @@ This part was intended to create an image classifier using a pretrained model.
 #### Project structure
 
 |_ pet_images
+
 |_ upload_images
+
 |...
+
 |... all program files
 
 #### How to run
 
 Just run every single cell of the Notebook (.ipynb file) top down.
 The cell that can be used for testing is the one containing :
-`image_to_test_path = "/data/flowers/test/25/image_06583.jpg"
-probs, classes = predict(image_to_test_path, model)
-display_image_results(image_to_test_path)`
+`image_to_test_path = "/data/flowers/test/25/image_06583.jpg"`
+`probs, classes = predict(image_to_test_path, model)`
+`display_image_results(image_to_test_path)`
 
 Mainly:
 * specify an image filename
