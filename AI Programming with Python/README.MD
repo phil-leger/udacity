@@ -21,13 +21,14 @@ This first project was mainly intended to make student practice Python and get c
 ### How to run
 
 Command line:
-`python check_images.py --dir image_dir --arch nn_arch`
+`python check_images.py --dir image_dir --arch nn_arch --dogfile dog_file`
 where:
-* image_dir is the folder containing the images (pet_images or upload_images)
-* nn_arch is the Neural Network architecture used to classify the images (alexnet, resnet or vgg)
+* `image_dir` is the folder containing the images (pet_images or upload_images)
+* `nn_arch` is the Neural Network architecture used to classify the images (alexnet, resnet or vgg)
+* `dog_file` is the text file containing all breeds of dogs
 
 Example:
-`python check_images.py --dir pet_images/ --arch resnet`
+`python check_images.py --dir pet_images/ --arch resnet --dogfile dognames.txt`
 
 You can run the classification for all different architectures  in one shot by using:
 * run_models_batch.bat (Windows)
@@ -62,7 +63,9 @@ Of course, within each directory, the images (no specific name is required)
 Just run every single cell of the Notebook (.ipynb file) top down.
 The cell that can be used for testing is the one containing :
 `image_to_test_path = "/data/flowers/test/25/image_06583.jpg"`
+
 `probs, classes = predict(image_to_test_path, model)`
+
 `display_image_results(image_to_test_path)`
 
 Mainly:
@@ -100,13 +103,13 @@ This must be run exclusively in command line.
 
 `python train.py flowers --arch nn_arch --gpu gpuset --save_dir cpt_dir --epochs epoch_num --learning_rate lr --hidden_units hidden_num --dropout drop_num`
 where:
-* nn_arch is the Neural Network architecture used to classify the images (alexnet, resnet18 or vgg19_bn)
-* gpuset is the usage of GPU for training to speed up the computation (1: yes, 0: no)
-* cpt_dir is the directory for saving the model checkpoints
-* epoch_num is the number of epochs (iterations) to train the model
-* lr is the learning rate to train the model
-* hidden_num is the number of hidden units in our hidden layer
-* drop_num is the dropout - probability of randomly disactivate somme nodes of our NN (between 0 and 1)
+* `nn_arch` is the Neural Network architecture used to classify the images (alexnet, resnet18 or vgg19_bn)
+* `gpuset` is the usage of GPU for training to speed up the computation (1: yes, 0: no) - please see CUDA note
+* `cpt_dir` is the directory for saving the model checkpoints
+* `epoch_num` is the number of epochs (iterations) to train the model
+* `lr` is the learning rate to train the model
+* `hidden_num` is the number of hidden units in our hidden layer
+* `drop_num` is the dropout - probability of randomly disactivate somme nodes of our NN (between 0 and 1)
 
 Examples:
 * `python train.py flowers --arch alexnet --gpu 1 --save_dir checkpoints --epochs 5 --learning_rate 0.0002 --hidden_units 512 --dropout 0.3`
@@ -115,16 +118,31 @@ Examples:
 
 ### To test the model:
 
-`python predict.py flowers --arch alexnet --gpu 1 --save_dir checkpoints --epochs 5 --learning_rate 0.0002 --hidden_units 512 --dropout 0.3`
+`python predict.py flower_file cpt_file --arch nn_arch --top_k top_k_num --category_names cat_name --gpu gpuset`
 where:
-* image_dir is the folder containing the images (pet_images or upload_images)
-* nn_arch is the Neural Network architecture used to classify the images (alexnet, resnet or vgg)
+* `flower_file` is the filename of the flower to classify
+* `cpt_file` is the model checkpoint file
+* `nn_arch` is the Neural Network architecture used to classify the images (alexnet, resnet or vgg)
+* `top_k_num` is number of top most likely classes the flower is identified
+* `cat_name` is the file containing flower classes ID and their labels
+* `gpuset` is the usage of GPU for training to speed up the computation (1: yes, 0: no) - please see CUDA note
 
 Examples:
 * `python predict.py flowers/test/25/image_06583.jpg checkpoints/alexnet.pth --arch alexnet --top_k 5 --category_names cat_to_name.json --gpu 1`
 * `python predict.py flowers/test/25/image_06583.jpg checkpoints/resnet18.pth --arch resnet18 --top_k 5 --category_names cat_to_name.json --gpu 1`
 * `python predict.py flowers/test/25/image_06583.jpg checkpoints/vgg19_bn.pth --arch vgg19_bn --top_k 5 --category_names cat_to_name.json --gpu 1`
 
+Reminder: of course, the checkpoint file must be used accordingly with the right Neural Network architecture, otherwise the Neural Network can't be initialized.
+
+## CUDA
+
+CUDA stands for Compute Device Unified Architecture.
+It is a platform that has been created by Nvidia in 2007. The idea is to use GPU processing power to speed up the amount of computations required for today's applications (such as AI based ones).
+From what I experienced, GPU computation is at least 10 times faster than CPU one. 
+
+You can check if your GPU is compliant with CUDA by clicking [there](https://developer.nvidia.com/cuda-gpus).
+
+If your GPU is not compatible, then you must run the programs with --gpu 0 or not mention the parameter, as default value is 0.
 
 ## Licensing
 All that stuff is under MIT licensing:
