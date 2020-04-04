@@ -43,13 +43,19 @@ This part was intended to create an image classifier using a pretrained model.
 
 #### Project structure
 
-|_ pet_images
+|_ assets
 
-|_ upload_images
+|_ flowers
 
 |...
 
 |... all program files
+
+Note: in the project environment, there was an alias on flowers directory (data/flowers/...), just keep in mind that the important thing is having a proper call to the directory, and the directory itself must follow the pattern:
+* flowers/train/X : X being a directory X = {1, ..., 102} corresponding to the class id of the flowers (check cat_to_name.json file)
+* flowers/valid/X : X being a directory X = {1, ..., 102} corresponding to the class id of the flowers (check cat_to_name.json file)
+* flowers/test/X : X being a directory X = {1, ..., 102} corresponding to the class id of the flowers (check cat_to_name.json file)
+Of course, within each directory, the images (no specific name is required)
 
 #### How to run
 
@@ -63,6 +69,62 @@ Mainly:
 * specify an image filename
 * predict the classification of that image
 * display the results graphically
+
+### Part 2: convert the image classifier into a command line application
+
+#### Context
+
+This part was intended to use our image classifier built previously and make it runnable through command line.
+
+#### Project structure
+
+|_ assets
+
+|_ flowers
+
+|...
+
+|... all program files
+
+Note: in the project environment, there was an alias on flowers directory (data/flowers/...), just keep in mind that the important thing is having a proper call to the directory, and the directory itself must follow the pattern:
+* flowers/train/X : X being a directory X = {1, ..., 102} corresponding to the class id of the flowers (check cat_to_name.json file)
+* flowers/valid/X : X being a directory X = {1, ..., 102} corresponding to the class id of the flowers (check cat_to_name.json file)
+* flowers/test/X : X being a directory X = {1, ..., 102} corresponding to the class id of the flowers (check cat_to_name.json file)
+Of course, within each directory, the images (no specific name is required)
+
+#### How to run
+
+This must be run exclusively in command line.
+
+### To train the model:
+
+`python train.py flowers --arch nn_arch --gpu gpuset --save_dir cpt_dir --epochs epoch_num --learning_rate lr --hidden_units hidden_num --dropout drop_num`
+where:
+* nn_arch is the Neural Network architecture used to classify the images (alexnet, resnet18 or vgg19_bn)
+* gpuset is the usage of GPU for training to speed up the computation (1: yes, 0: no)
+* cpt_dir is the directory for saving the model checkpoints
+* epoch_num is the number of epochs (iterations) to train the model
+* lr is the learning rate to train the model
+* hidden_num is the number of hidden units in our hidden layer
+* drop_num is the dropout - probability of randomly disactivate somme nodes of our NN (between 0 and 1)
+
+Examples:
+* `python train.py flowers --arch alexnet --gpu 1 --save_dir checkpoints --epochs 5 --learning_rate 0.0002 --hidden_units 512 --dropout 0.3`
+* `python train.py flowers --arch resnet18 --gpu 1 --save_dir checkpoints --epochs 5 --learning_rate 0.0002 --hidden_units 512 --dropout 0.3`
+* `python train.py flowers --arch vgg19_bn --gpu 1 --save_dir checkpoints --epochs 5 --learning_rate 0.0002 --hidden_units 512 --dropout 0.3`
+
+### To test the model:
+
+`python predict.py flowers --arch alexnet --gpu 1 --save_dir checkpoints --epochs 5 --learning_rate 0.0002 --hidden_units 512 --dropout 0.3`
+where:
+* image_dir is the folder containing the images (pet_images or upload_images)
+* nn_arch is the Neural Network architecture used to classify the images (alexnet, resnet or vgg)
+
+Examples:
+* `python predict.py flowers/test/25/image_06583.jpg checkpoints/alexnet.pth --arch alexnet --top_k 5 --category_names cat_to_name.json --gpu 1`
+* `python predict.py flowers/test/25/image_06583.jpg checkpoints/resnet18.pth --arch resnet18 --top_k 5 --category_names cat_to_name.json --gpu 1`
+* `python predict.py flowers/test/25/image_06583.jpg checkpoints/vgg19_bn.pth --arch vgg19_bn --top_k 5 --category_names cat_to_name.json --gpu 1`
+
 
 ## Licensing
 All that stuff is under MIT licensing:
