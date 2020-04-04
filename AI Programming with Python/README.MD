@@ -57,7 +57,8 @@ Note: in the project environment, there was an alias on flowers directory (data/
 * flowers/train/X : X being a directory X = {1, ..., 102} corresponding to the class id of the flowers (check cat_to_name.json file)
 * flowers/valid/X : X being a directory X = {1, ..., 102} corresponding to the class id of the flowers (check cat_to_name.json file)
 * flowers/test/X : X being a directory X = {1, ..., 102} corresponding to the class id of the flowers (check cat_to_name.json file)
-Of course, within each directory, the images (no specific name is required)
+
+Each directory must contain images (no specific name is required) in jpg format.
 
 #### How to run
 
@@ -73,6 +74,8 @@ Mainly:
 * specify an image filename
 * predict the classification of that image
 * display the results graphically
+
+Outcome can be shown [here](https://github.com/phil-leger/udacity/blob/master/AI%20Programming%20with%20Python/project2/part1/ai_prog_with_python_project_2_1.png)
 
 ### Part 2: convert the image classifier into a command line application
 
@@ -94,7 +97,8 @@ Note: in the project environment, there was an alias on flowers directory (data/
 * flowers/train/X : X being a directory X = {1, ..., 102} corresponding to the class id of the flowers (check cat_to_name.json file)
 * flowers/valid/X : X being a directory X = {1, ..., 102} corresponding to the class id of the flowers (check cat_to_name.json file)
 * flowers/test/X : X being a directory X = {1, ..., 102} corresponding to the class id of the flowers (check cat_to_name.json file)
-Of course, within each directory, the images (no specific name is required)
+
+Each directory must contain images (no specific name is required) in jpg format.
 
 #### How to run
 
@@ -102,8 +106,9 @@ This must be run exclusively in command line.
 
 ### To train the model:
 
-`python train.py flowers --arch nn_arch --gpu gpuset --save_dir cpt_dir --epochs epoch_num --learning_rate lr --hidden_units hidden_num --dropout drop_num`
+`python train.py flowers_dir --arch nn_arch --gpu gpuset --save_dir cpt_dir --epochs epoch_num --learning_rate lr --hidden_units hidden_num --dropout drop_num`
 where:
+* `flowers_dir` is the directory where all flowers are stored (remember the previous note above regarding subdirectories)
 * `nn_arch` is the Neural Network architecture used to classify the images (alexnet, resnet18 or vgg19_bn)
 * `gpuset` is the usage of GPU for training to speed up the computation (1: yes, 0: no) - please see CUDA note
 * `cpt_dir` is the directory for saving the model checkpoints
@@ -135,13 +140,15 @@ Examples:
 
 Reminder: of course, the checkpoint file must be used accordingly with the right Neural Network architecture, otherwise the Neural Network can't be initialized.
 
+Outcome can be shown [here](https://github.com/phil-leger/udacity/blob/master/AI%20Programming%20with%20Python/project2/part2/ai_prog_with_python_project_2_2.png)
+
 ## CUDA
 
 CUDA stands for Compute Device Unified Architecture.
 It is a platform that has been created by Nvidia in 2007. The idea is to use GPU processing power to speed up the amount of computations required for today's applications (such as AI based ones).
 From what I experienced, GPU computation is at least 10 times faster than CPU one. 
 
-You can check if your GPU is compliant with CUDA by clicking [there](https://developer.nvidia.com/cuda-gpus).
+You can check if your GPU is compatible with CUDA by clicking [here](https://developer.nvidia.com/cuda-gpus).
 
 If your GPU is not compatible, then you must run the programs with --gpu 0 or not mention the parameter, as default value is 0.
 
