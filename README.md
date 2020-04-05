@@ -10,9 +10,10 @@ Keywords: Python, Numpy, Pandas, Pytorch, Neural Networks, Computer Vision
 ## Requirements
 To run the programs, you need following software:
 * Python 3.X
-* Python notebook editor
+* Extended Python libraries (Numpy, Pandas, Pytorch)
+* A Python notebook editor
 
-I recommend the installation of [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html), as it's an all-in-one package containing everything you need (python, jupyter notebooks, additional packages such as numpy, pandas, pytorch and so on).
+I recommend the installation of [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/download.html), as it's an all-in-one package containing everything you need (python, jupyter notebooks, additional packages such as Numpy, Pandas, Pytorch and so on).
 
 ## Licensing
 All that stuff is under MIT licensing:
